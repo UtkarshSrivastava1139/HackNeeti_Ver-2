@@ -61,7 +61,7 @@ export function HeroSection() {
             <Image
               src="/images/logo-jssaten.png"
               alt="IEEE JSSATEN Logo"
-              width={300}
+              width={200}
               height={80}
               className="h-auto"
             />

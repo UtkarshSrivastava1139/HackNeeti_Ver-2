@@ -66,10 +66,10 @@ export function AboutSection() {
 
           <motion.div variants={itemVariants} className="flex flex-col justify-center">
             <p className="text-lg mb-6">
-              HackNeeti 1.0 is the first-ever flagship hackathon hosted by the IEEE JSSATEN Student Branch, in collaboration with IEEE JSS University Student Branch. This single-day, 8-hour event will bring together top student innovators, developers, and tech enthusiasts to build cutting-edge solutions for real-world problems.
+              HackNeeti is the first-ever flagship hackathon hosted by the IEEE JSSATEN Student Branch. This single-day, 8-hour event will bring together top student innovators, developers, and tech enthusiasts to build cutting-edge solutions for real-world problems.
             </p>
             <p className="text-lg">
-              With a focus on domains like AI/ML, Web 3.0, Cybersecurity, Hardware, and IoT (RFID-based systems), HackNeeti 1.0 is a platform for participants to learn, build, and innovate under expert mentorship and competitive pressure.
+              With a focus on domains like AI/ML, Web 3.0, Cybersecurity, Hardware, and IoT (RFID-based systems), HackNeeti is a platform for participants to learn, build, and innovate under expert mentorship and competitive pressure.
             </p>
           </motion.div>
         </motion.div>
@@ -116,7 +116,7 @@ export function AboutSection() {
                     height={30}
                     className="h-auto"
                   />
-                  <h3 className="text-xl font-bold ml-4">About IEEE JSSATE NOIDA STudent Branch</h3>
+                  <h3 className="text-xl font-bold ml-4">About IEEE JSSATE NOIDA Student Branch</h3>
             
                 </div>
                 <p className="text-foreground/80">

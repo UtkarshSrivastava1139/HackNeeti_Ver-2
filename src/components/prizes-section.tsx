@@ -64,31 +64,34 @@ export function PrizesSection() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center md:items-end gap-8 md:gap-6 lg:gap-10 mt-8">
-          {/* Second Prize (Left) */}
+          {/* Second Prize (Left in desktop, second in mobile) */}
           <PrizeCard 
             key={prizes[1].id}
             prize={prizes[1]}
             index={0}
             height="h-full md:h-[400px]"
             isInView={isInView}
+            className="order-2 md:order-1"
           />
-          
-          {/* First Prize (Center - Taller) */}
+
+          {/* First Prize (Center in desktop, first in mobile) */}
           <PrizeCard
             key={prizes[0].id}
             prize={prizes[0]}
             index={1}
             height="h-full md:h-[450px]"
             isInView={isInView}
+            className="order-1 md:order-2"
           />
           
-          {/* Third Prize (Right) */}
+          {/* Third Prize (Right in desktop, third in mobile) */}
           <PrizeCard
             key={prizes[2].id}
             prize={prizes[2]}
             index={2}
             height="h-full md:h-[350px]"
             isInView={isInView}
+            className="order-3"
           />
         </div>
 
@@ -143,15 +146,16 @@ interface PrizeCardProps {
   index: number;
   height: string;
   isInView: boolean;
+  className?: string;
 }
 
-function PrizeCard({ prize, index, height, isInView }: PrizeCardProps) {
+function PrizeCard({ prize, index, height, isInView, className }: PrizeCardProps) {
   const Icon = prize.icon;
   const delayMultiplier = index;
 
   return (
     <motion.div
-      className={`prize-card ${height} w-full md:w-80 flex flex-col items-center justify-start p-6 md:p-8`}
+      className={`prize-card ${height} w-full md:w-80 flex flex-col items-center justify-start p-6 md:p-8 ${className}`}
       style={{
         boxShadow: `0 10px 30px ${prize.color}20`,
         borderColor: `${prize.color}40`,
