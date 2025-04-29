@@ -62,11 +62,11 @@ export default function Home() {
                 <div className="diamond" />
               </div>
 
-              {/* <TimelineSection />
+              <TimelineSection />
 
               <div className="diamond-divider">
                 <div className="diamond" />
-              </div> */}
+              </div>
 
               <PrizesSection />
 
