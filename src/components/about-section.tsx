@@ -151,7 +151,7 @@ export function AboutSection() {
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex items-center mb-4">
                   <Image
-                    src="/images/logo-jssun.png"
+                    src="/images/ieee-jssun-logo.png"
                     alt="IEEE JSSATEN Logo"
                     width={150}
                     height={30}
