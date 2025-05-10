@@ -103,7 +103,27 @@ export function AboutSection() {
               </CardContent>
             </Card>
           </motion.div>
-       
+
+          
+          <motion.div variants={itemVariants}>
+            <Card className="glass-effect border-primary/20 h-full">
+              <CardContent className="p-6 flex flex-col h-full">
+                <div className="flex items-center mb-4">
+                  <Image
+                    src="/images/jssuni.png"
+                    alt="IEEE JSSUN Logo"
+                    width={80}
+                    height={30}
+                    className="h-auto"
+                  />
+                  <h3 className="text-xl font-bold ml-4">About JSS University, Noida</h3>
+                </div>
+                <p className="text-foreground/80">
+                JSS University, Noida, established by JSS Mahavidyapeetha, offers quality education in Science, Technology, Management, and Pharmacy. Built on the legacy of JSSATEN, it emphasizes research, innovation, and skill development to address global challenges and meet evolving societal needs across sectors.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
 
           <motion.div variants={itemVariants}>
             <Card className="glass-effect border-primary/20 h-full">
@@ -116,11 +136,37 @@ export function AboutSection() {
                     height={30}
                     className="h-auto"
                   />
-                  <h3 className="text-xl font-bold ml-4">About IEEE JSSATE NOIDA Student Branch</h3>
+                  <h3 className="text-xl font-bold ml-4">About IEEE JSSATE Noida Student Branch</h3>
             
                 </div>
                 <p className="text-foreground/80">
                   The IEEE JSSATEN Student Branch is a dynamic and active part of the global IEEE community, established at JSS Academy of Technical Education, Noida. It serves as a platform for students to explore, innovate, and contribute to the advancement of technology through various technical, professional, and community-oriented activities.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <Card className="glass-effect border-primary/20 h-full">
+              <CardContent className="p-6 flex flex-col h-full">
+                <div className="flex items-center mb-4">
+                  <Image
+                    src="/images/logo-jssun.png"
+                    alt="IEEE JSSATEN Logo"
+                    width={150}
+                    height={30}
+                    className="h-auto"
+                  />
+                  <h3 className="text-xl font-bold ml-4">About IEEE JSS University Noida Student Branch</h3>
+            
+                </div>
+                <p className="text-foreground/80">
+                  The IEEE JSSUN Student Branch is a vibrant and growing part of the global
+IEEE community, established under JSS University, Noida. Operating under
+the IEEE Uttar Pradesh Section and Region 10 (Asia-Pacific), it fosters a strong
+community of enthusiastic student members dedicated to innovation,
+collaboration, and technical excellence through impactful events, hands-on
+workshops, and outreach initiatives.
                 </p>
               </CardContent>
             </Card>

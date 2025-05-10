@@ -25,8 +25,8 @@ const sponsorCategories = [
     sponsors: [
       {
         id: "sponsor2",
-        name: "Github",
-        logo: "/images/github.png", // Placeholder, replace with actual logo
+        name: "GeeksforGeeks",
+        logo: "/images/gfg.jpeg", // Placeholder, replace with actual logo
         url: "#",
       },
       {
@@ -130,7 +130,9 @@ export function SponsorsSection() {
                       stiffness: 100,
                       damping: 12
                     }}
-                    whileHover={{ scale: 1.05 }}
+                    className={`${
+                      category.id === 'platinum' ? 'w-full max-w-xl mx-auto' : ''
+                    }`}
                   >
                     <a
                       href={sponsor.url}
@@ -138,19 +140,19 @@ export function SponsorsSection() {
                       rel="noopener noreferrer"
                       className="block"
                     >
-                      <Card className={`glass-effect h-48 flex items-center justify-center p-6 border-primary/20 ${
+                      <Card className={`glass-effect h-48 flex items-center justify-center p-6 border-primary/20 transition-all duration-300 group hover:shadow-[0_0_15px_rgba(226,135,67,0.4)] ${
                         category.id === 'platinum' ? 'max-w-xl mx-auto' : ''
                       }`}>
                         <div className="relative h-full w-full">
                           <div className={`absolute inset-0 ${
-                            sponsor.name === "Devfolio" ? "bg-white rounded-xl flex items-center justify-center p-4" : ""
+                            sponsor.name === "Devfolio" || sponsor.name === "GeeksforGeeks" || sponsor.name === "ETH India" ? "bg-white rounded-xl flex items-center justify-center p-4" : ""
                           }`}>
                             <Image
                               src={sponsor.logo}
                               alt={sponsor.name}
                               fill
-                              className={`object-contain py-4 px-6 filter brightness-100 hover:brightness-110 transition-all ${
-                                sponsor.name === "Devfolio" ? "!relative !h-full !w-auto" : ""
+                              className={`object-contain py-4 px-6 ${
+                                sponsor.name === "Devfolio" || sponsor.name === "GeeksforGeeks" || sponsor.name === "ETH India" ? "!relative !h-full !w-auto" : ""
                               }`}
                             />
                           </div>

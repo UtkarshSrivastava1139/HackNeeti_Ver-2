@@ -116,6 +116,17 @@ export function Footer() {
                   />
                   <span className="text-sm text-foreground/90">IEEE JSSATEN Student Branch</span>
                 </div>
+
+                <div className="flex items-center space-x-2">
+                  <Image
+                    src="/images/logo-jssun.png"
+                    alt="IEEE JSSATEN Logo"
+                    width={40}
+                    height={20}
+                    className="h-6 w-auto"
+                  />
+                  <span className="text-sm text-foreground/90">IEEE JSSUN Student Branch</span>
+                </div>
               </div>
             </div>
           </div>

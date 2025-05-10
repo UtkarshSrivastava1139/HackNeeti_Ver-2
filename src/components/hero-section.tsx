@@ -7,7 +7,7 @@ import { calculateTimeLeft } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 // Set hackathon date (example date, replace with actual date)
-const hackathonDate = new Date("2025-05-19T09:00:00");
+const hackathonDate = new Date("2025-06-20T09:00:00");
 
 export function HeroSection() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(hackathonDate));
@@ -66,6 +66,72 @@ export function HeroSection() {
               className="h-auto"
             />
           </motion.div>
+
+          {/* Decorative X symbol */}
+          <motion.div 
+            className="mx-6 relative w-16 h-16"
+            initial={{ opacity: 0, rotate: -20, scale: 0.5 }}
+            animate={{ opacity: 1, rotate: 0, scale: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            {/* First diagonal line */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div 
+                className="h-0.5 w-20 rounded-full transform rotate-45"
+                style={{ 
+                  background: "linear-gradient(90deg, transparent, hsl(45, 94%, 60%) 50%, transparent)", 
+                }}
+              />
+            </div>
+            
+            {/* Second diagonal line */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div 
+                className="h-0.5 w-20 rounded-full transform -rotate-45"
+                style={{ 
+                  background: "linear-gradient(90deg, transparent, hsl(45, 94%, 60%) 50%, transparent)", 
+                }}
+              />
+            </div>
+            
+            {/* Outer glow effect - more subtle */}
+            <div className="absolute inset-0 opacity-30 blur-[1px]"> 
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div 
+                  className="h-1 w-20 rounded-full transform rotate-45"
+                  style={{ 
+                    background: "linear-gradient(90deg, transparent, hsl(45, 94%, 60%) 50%, transparent)", 
+                  }}
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div 
+                  className="h-1 w-20 rounded-full transform -rotate-45"
+                  style={{ 
+                    background: "linear-gradient(90deg, transparent, hsl(45, 94%, 60%) 50%, transparent)", 
+                  }}
+                />
+              </div>
+            </div>
+          </motion.div>
+          
+          {/* Second logo comes from right */}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, type: "spring", stiffness: 100, delay: 0.4 }}
+          >
+            <Image
+              src="/images/logo-jssun.png"
+              alt="IEEE JSSUN Logo"
+              width={200}
+              height={80}
+              className="h-auto"
+            />
+          </motion.div>
+
+
+
         </div>
 
         <motion.p
@@ -98,6 +164,16 @@ export function HeroSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             WHERE STRATEGY MEETS TECHNOLOGY
+          </motion.p>
+          
+          {/* Expected date line */}
+          <motion.p
+            className="text-lg md:text-xl text-foreground/90 mt-2 font-medium"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            Expected Date: 20th June 2025
           </motion.p>
         </motion.div>
 
