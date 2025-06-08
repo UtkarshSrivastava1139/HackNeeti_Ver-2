@@ -89,10 +89,7 @@ export function Footer() {
                     hackneeti@gmail.com
                   </a>
                 </li>
-                <li className="flex items-start space-x-2 text-sm">
-                  <span className="text-primary">Phone:</span>
-                  <span>+91 9650411734</span>
-                </li>
+      
                 <li className="flex items-start space-x-2 text-sm">
                   <span className="text-primary">Address:</span>
                   <span>
