@@ -128,14 +128,24 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="h-px w-full bg-primary/20 my-8" />
+          <div className="h-px w-full bg-primary/20 my-8" />          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col space-y-2 md:order-1">
+              <p className="text-foreground/70 text-sm mb-1">
+                © {currentYear} HackNeeti. All Rights Reserved.
+              </p>
+              <p className="text-foreground/70 text-sm">
+                Developed & Managed by{" "}
+                <a href="https://www.utkarshsrivastava.me/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Utkarsh Srivastava
+                </a>{" "}
+                &{" "}
+                <a href="https://www.linkedin.com/in/yash-gupta-a8765c/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Yash Gupta
+                </a>
+              </p>
+            </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-foreground/70 text-sm md:order-1 mb-4 md:mb-0">
-              © {currentYear} HackNeeti. All Rights Reserved.
-            </p>
-
-            <div className="flex space-x-6 md:order-2">
+            <div className="flex space-x-6 md:order-2 mt-4 md:mt-0">
               <Link
                 href="#"
                 className="text-sm text-foreground/70 hover:text-primary transition-colors"

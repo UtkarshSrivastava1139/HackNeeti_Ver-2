@@ -34,6 +34,24 @@ const sponsorCategories = [
         name: "ETH India",
         logo: "/images/eth.png", // Placeholder, replace with actual logo
         url: "#",
+      },
+      {
+        id: "sponsor4",
+        name: "Github",
+        logo: "/images/github2.png", // Placeholder, replace with actual logo
+        url: "#",
+      },
+      {
+        id: "sponsor5",
+        name: "CertifyMe",
+        logo: "/images/certifyme.png", // Placeholder, replace with actual logo
+        url: "#",
+      },
+      {
+        id: "sponsor6",
+        name: "SheBuilds",
+        logo: "/images/shebuilds.png", // Placeholder, replace with actual logo
+        url: "#",
       }
     ]
   }
@@ -109,15 +127,7 @@ export function SponsorsSection() {
             >
               <h3 className="text-2xl font-bold text-primary text-center">
                 {category.title}
-              </h3>
-
-              <div className={`grid grid-cols-1 ${
-                category.id === 'platinum'
-                  ? 'md:grid-cols-1'
-                  : category.id === 'gold'
-                    ? 'md:grid-cols-2'
-                    : 'md:grid-cols-3'
-              } gap-6`}>
+              </h3>              <div className="flex flex-wrap justify-center gap-6">
                 {category.sponsors.map((sponsor, index) => (
                   <motion.div
                     key={sponsor.id}
@@ -129,9 +139,9 @@ export function SponsorsSection() {
                       type: "spring",
                       stiffness: 100,
                       damping: 12
-                    }}
-                    className={`${
-                      category.id === 'platinum' ? 'w-full max-w-xl mx-auto' : ''
+                    }}                    className={`${
+                      category.id === 'platinum' ? 'w-[30%] min-w-[280px] mx-2 mb-4' : 
+                      category.id === 'gold' ? 'w-[30%] min-w-[280px] mx-2 mb-4' : ''
                     }`}
                   >
                     <a
@@ -139,21 +149,13 @@ export function SponsorsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"
-                    >
-                      <Card className={`glass-effect h-48 flex items-center justify-center p-6 border-primary/20 transition-all duration-300 group hover:shadow-[0_0_15px_rgba(226,135,67,0.4)] ${
-                        category.id === 'platinum' ? 'max-w-xl mx-auto' : ''
-                      }`}>
-                        <div className="relative h-full w-full">
-                          <div className={`absolute inset-0 ${
-                            sponsor.name === "Devfolio" || sponsor.name === "GeeksforGeeks" || sponsor.name === "ETH India" ? "bg-white rounded-xl flex items-center justify-center p-4" : ""
-                          }`}>
+                    >                      <Card className="glass-effect h-48 flex items-center justify-center p-6 border-primary/20 transition-all duration-300 group hover:shadow-[0_0_15px_rgba(226,135,67,0.4)]">
+                        <div className="relative h-full w-full">                        <div className="absolute inset-0 bg-white rounded-xl flex items-center justify-center p-4">
                             <Image
                               src={sponsor.logo}
                               alt={sponsor.name}
                               fill
-                              className={`object-contain py-4 px-6 ${
-                                sponsor.name === "Devfolio" || sponsor.name === "GeeksforGeeks" || sponsor.name === "ETH India" ? "!relative !h-full !w-auto" : ""
-                              }`}
+                              className="object-contain py-4 px-6 !relative !h-full !w-auto"
                             />
                           </div>
                         </div>
